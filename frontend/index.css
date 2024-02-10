@@ -1,10 +1,20 @@
+/*
+Fonts: Oswald Bold for titles, headers
+       Source Sans Pro for regular text
+Color Palette: 
+    Dark green: #283618
+    Olive green: #606C38
+    Brown: #BC6C25
+    Tan: #DDA15E 
+    Khaki: #FEFAE0
+*/
+
 body{
     background-color: #FEF6C9;
 }
 
-
 .app-header{
-    align-items: center;
+    width: auto;
 }
 .title{
     text-decoration: none;

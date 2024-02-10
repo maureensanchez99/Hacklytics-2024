@@ -7,22 +7,12 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
         <!-- PyScript CSS -->
-        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+        <script src="https://pyscript.net/releases/2024.1.1/core.js"></script>
         <!-- CSS for examples -->
         <link rel="stylesheet" href="/frontend/index.css" />
 
         <!-- This script tag bootstraps PyScript -->
-        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-
-        <!-- for splashscreen -->
-        <!--<style>
-            #loading { outline: none; border: none; background: transparent }
-        </style>
-        <script type="module">
-            const loading = document.getElementById('loading');
-            addEventListener('py:ready', () => loading.close());
-            loading.showModal();
-        </script>-->
+        <script src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
         <title>MyHealth Wrapped</title>
         
@@ -42,9 +32,18 @@
     </head>
 
     <body>
+        <py-script>
+            from pyodide import instagram_all_csv
+            # Read CSV data 
+            data = load_csv("instagram_all.csv")
+        </py-script>
+        
         <div class="app-header">
             <a class="title" href="" style="color: #2B381B">MyHealth Wrapped</a>
         </div>
 
+        <div class="pi-chart">
+
+        </div>
     </body>
 </html>
