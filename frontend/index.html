@@ -5,25 +5,28 @@
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-        <!-- PyScript CSS -->
-        <script src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-        <!-- CSS for examples -->
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <link rel="stylesheet" href="/frontend/index.css" />
-
-        <!-- This script tag bootstraps PyScript -->
-        <script src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-
         <title>MyHealth Wrapped</title>
     </head>
 
     <body>
         <div class="app-header">
-            <a class="title" href="" style="color: #2B381B">MyHealth Wrapped</a>
+            <a class="title" style="color: #2B381B">MyHealth Wrapped</a>
         </div>
 
-        <div class="pi-chart">
-
+        <div class="welcome">
+            <h1>Welcome</h1>
+            <div id="username-container">
+                Enter your username: <input type="text" id="username-input"
+                py-change="update_username()">
+            </div>
+            <div id="welcome-message">
+                Hello, <span id="username-display"></span>!
+            </p>
         </div>
+        <py-script>
+            
+        </py-script>
     </body>
 </html>

@@ -11,11 +11,25 @@ Color Palette:
 
 body{
     background-color: #FEF6C9;
+    align-content: center;
+    text-align: center;
 }
 
 .app-header{
-    width: auto;
+    width: 100%;
+    margin: auto;
+    padding-top: 5%;
 }
+
 .title{
     text-decoration: none;
+    color: #283618;
+    font-weight: bold;
+    font-size: 300%;
+    text-shadow: 5px 5px 10px #606c38;
+}
+
+h1{
+    padding-top: 5%;
+    font-size: 200%;
 }
