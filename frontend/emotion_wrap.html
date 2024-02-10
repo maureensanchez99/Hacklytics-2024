@@ -15,9 +15,29 @@
         <script src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
         <title>MyHealth Wrapped</title>
+        
+        <!--<style>
+            .loading {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                border: 3px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                border-top-color: black;
+                animation: spin 1s ease-in-out infinite;
+            }
+
+        </style>-->
+
     </head>
 
     <body>
+        <py-script>
+            from pyodide import instagram_all_csv
+            # Read CSV data 
+            data = load_csv("instagram_all.csv")
+        </py-script>
+        
         <div class="app-header">
             <a class="title" href="" style="color: #2B381B">MyHealth Wrapped</a>
         </div>
