@@ -1,0 +1,11 @@
+body{
+    background-color: #FEF6C9;
+}
+
+
+.app-header{
+    align-items: center;
+}
+.title{
+    text-decoration: none;
+}
