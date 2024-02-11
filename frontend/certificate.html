@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Usage</title>
-    <style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style> 
         body{
             background-color: #FEF6C9;
+            align-content: center;
+            text-align: center;
+        }
+        .app-header{
+            width: 100%;
+            margin: auto;
+            padding-top: 5%;
+        }
+        .title{
+            text-decoration: none;
+            color: #283618;
+            font-weight: bold;
+            font-size: 300%;
+            text-shadow: 5px 5px 10px #606c38;
         }
         .container {
             position: relative;
@@ -16,7 +31,7 @@
             justify-content: center;
             height: 100vh; /* Set container to full viewport height */
         }
-        .text-overlay {
+        .text-overlay{
             display: none; /* Hide the overlay by default */
             position: absolute;
             width: 75%;
@@ -36,7 +51,11 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div class="app-header">
+        <a class="title" style="color: #2B381B">MyHealth Wrapped</a>
+    </div>
     <div class="container">
+        <canvas id="myChart"></canvas>
         <div class="text-overlay">
             <p id="messagePopUp">Hello [username], you spent [hours] hours on social media.</p>
         </div>
@@ -44,11 +63,6 @@
     </div>
 
     <script>
-        //function getUsername() {
-            // Replace this with your method to get the username
-          //  return "User"; // Placeholder username
-       // }
-
         var username = getUsername();
         var hoursSpent = 5; // Replace this with the actual hours spent on social media
         var overlayMessage = document.querySelector(".text-overlay p"); // Select the paragraph inside the overlay
