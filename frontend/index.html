@@ -2,11 +2,11 @@
 
 <html>
     <head>
-        <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="/frontend/index.css" />
         <title>MyHealth Wrapped</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
 
     <body>
@@ -14,15 +14,14 @@
             <a class="title" style="color: #2B381B">MyHealth Wrapped</a>
         </div>
 
-        <div class="welcome">
-            <h1>Welcome</h1>
-            <div id="username-container">
-                Enter your username: <input type="text" id="username-input" onchange="updateUsername()">
-            </div>
-            <button id="enter-name">Enter Name</button>
+        <div class="login-box">
+            <form action="/frontend/certificate.html">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <input type="submit" value="Submit" onclick="saveUsername()">
+            </form>
         </div>
-        <div id="message-overlay"></div>
-        
-        <script src="/frontend/script.js"></script>
-    </body>
-</html>
+        <script src="script.js"></script>       
+        </body>
+
+    </html>

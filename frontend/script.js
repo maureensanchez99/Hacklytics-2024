@@ -1,6 +1,16 @@
 function updateUsername() {
     let username = document.getElementById("username-input").value;
     document.getElementById("username-display").innerText = username;
+    //window.location.href = '/frontend/emotion_wrap.html';
+    window.location.href = "/frontend/emotion_wrap.html";
+} 
+function saveUsername() {
+  var username = document.getElementById("username").value;
+  localStorage.setItem("username", username);
+}
+function getUsername() {
+  let username = localStorage.getItem("username");
+  return username;
 }
 
 const userNameInput = document.getElementById('user-name');

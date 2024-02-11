@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Usage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style> 
+        body{
+            background-color: #FEF6C9;
+            align-content: center;
+            text-align: center;
+        }
+        .app-header{
+            width: 100%;
+            margin: auto;
+            padding-top: 5%;
+        }
+        .title{
+            text-decoration: none;
+            color: #283618;
+            font-weight: bold;
+            font-size: 300%;
+            text-shadow: 5px 5px 10px #606c38;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Set container to full viewport height */
+        }
+        .text-overlay{
+            display: none; /* Hide the overlay by default */
+            position: absolute;
+            width: 75%;
+            height: 50%;
+            background-color: rgba(221, 161, 94, 0.5);
+            color: black;
+            font-size: 24px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            text-align: center;
+        }
+        #showPopUp {
+            margin-top: 20px; /* Add margin to the top of the button */
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="app-header">
+        <a class="title" style="color: #2B381B">MyHealth Wrapped</a>
+    </div>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+        <div class="text-overlay">
+            <p id="messagePopUp">Hello [username], you spent [hours] hours on social media.</p>
+        </div>
+        <button id="showPopUp">Show text</button>
+    </div>
+
+    <script>
+        var username = getUsername();
+        var hoursSpent = 5; // Replace this with the actual hours spent on social media
+        var overlayMessage = document.querySelector(".text-overlay p"); // Select the paragraph inside the overlay
+        overlayMessage.textContent = "Hello " + username + ", you spent " + hoursSpent + " hours on social media.";
+
+        var showPopupBtn = document.getElementById("showPopUp"); // Corrected id name
+        var textOverlay = document.querySelector(".text-overlay");
+        
+        showPopupBtn.addEventListener("click", function() {
+            textOverlay.style.display = "block"; // Show the overlay
+        });
+
+        // Event listener to close the overlay
+        textOverlay.addEventListener("click", function() {
+            this.style.display = "none"; // Hide the overlay
+        });
+    </script>
+</body>
+</html>
