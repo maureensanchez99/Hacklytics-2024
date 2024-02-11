@@ -5,7 +5,6 @@
         <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <link rel="stylesheet" href="/frontend/index.css" />
         <title>MyHealth Wrapped</title>
     </head>
@@ -18,15 +17,12 @@
         <div class="welcome">
             <h1>Welcome</h1>
             <div id="username-container">
-                Enter your username: <input type="text" id="username-input"
-                py-change="update_username()">
+                Enter your username: <input type="text" id="username-input" onchange="updateUsername()">
             </div>
             <div id="welcome-message">
                 Hello, <span id="username-display"></span>!
             </p>
         </div>
-        <py-script>
-            
-        </py-script>
+        <script src="/frontend/script.js"></script>
     </body>
 </html>
