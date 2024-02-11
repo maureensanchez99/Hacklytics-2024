@@ -40,57 +40,6 @@ h1{
     width: 100%;
     margin: auto;
     padding-top: 10%;
-    font-size: 150%;
+    font-size: 200%;
     padding-bottom: 5%;
 }
-
-#message-overlay{
-    display: none; /* Initially hidden */
-    position: fixed; /* Overlay the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #DDA15E; /* Semi-transparent background */
-    z-index: 10; /* Ensure it's on top of other elements */
-    text-align: center; /* Center the message */
-  }
-  
-#message-overlay > div {
-    margin: 50px auto; /* Center the content */
-    background-color: white;
-    padding: 20px;
-    border: 5px solid #ccc;
-    border-radius: 10px; /* Rounded corners */
-    width: 600px; /* Adjust width as needed */
-    position: relative;
-  }
-  
-#message-overlay::before, #message-overlay::after {
-    content: "";
-    position: absolute;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-  }
-  
-#message-overlay::before {
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-bottom: 20px solid #ccc;
-  }
-  
-#message-overlay::after {
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-top: 20px solid #ccc;
-  }
-
-#message-overlay p {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px;
-}
-
-  
