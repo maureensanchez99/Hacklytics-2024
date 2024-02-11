@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Usage</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="pink-background.png" alt="Image" width="500" height="300">
+        <div class="text-overlay">
+            <script>
+                var username = getUsername(); // Replace this with your method to save the username
+                var hoursSpent = 5; // Replace this with the actual hours spent on social media
+                document.write("Hello " + username + ", you spent " + hoursSpent + " hours on social media.");
+            </script>
+        </div>
+    </div>
+</body>
+</html>
