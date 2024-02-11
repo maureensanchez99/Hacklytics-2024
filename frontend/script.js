@@ -3,7 +3,7 @@ function updateUsername() {
     document.getElementById("username-display").innerText = username;
     //window.location.href = '/frontend/emotion_wrap.html';
     window.location.href = "/frontend/emotion_wrap.html";
-}
+} 
 function saveUsername() {
   var username = document.getElementById("username").value;
   localStorage.setItem("username", username);

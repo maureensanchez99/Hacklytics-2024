@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Usage</title>
     <style>
         .container {
-            justify-content: center;
+            position: relative;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Set container to full viewport height */
         }
         .text-overlay {
+            display: none; /* Hide the overlay by default */
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 50%;
+            background-color: rgba(255,0,0,0.5); 
             color: black;
             font-size: 24px;
             text-align: center;
+            justify-content: center;
+        }
+        #showPopUp {
+            margin-top: 20px; /* Add margin to the top of the button */
         }
     </style>
 </head>
@@ -22,12 +33,33 @@
     <div class="container">
         <img src="pink-background.png" alt="Image" width="500" height="300">
         <div class="text-overlay">
-            <script>
-                var username = getUsername(); // Replace this with your method to save the username
-                var hoursSpent = 5; // Replace this with the actual hours spent on social media
-                document.write("Hello " + username + ", you spent " + hoursSpent + " hours on social media.");
-            </script>
+            <p id="messagePopUp">Hello [username], you spent [hours] hours on social media.</p>
         </div>
+        <button id="showPopUp">Show text</button>
     </div>
+
+    <script>
+        function getUsername() {
+            // Replace this with your method to get the username
+            return "User"; // Placeholder username
+        }
+
+        var username = getUsername();
+        var hoursSpent = 5; // Replace this with the actual hours spent on social media
+        var overlayMessage = document.querySelector(".text-overlay p"); // Select the paragraph inside the overlay
+        overlayMessage.textContent = "Hello " + username + ", you spent " + hoursSpent + " hours on social media.";
+
+        var showPopupBtn = document.getElementById("showPopUp"); // Corrected id name
+        var textOverlay = document.querySelector(".text-overlay");
+        
+        showPopupBtn.addEventListener("click", function() {
+            textOverlay.style.display = "block"; // Show the overlay
+        });
+
+        // Event listener to close the overlay
+        textOverlay.addEventListener("click", function() {
+            this.style.display = "none"; // Hide the overlay
+        });
+    </script>
 </body>
 </html>
